@@ -1,0 +1,55 @@
+﻿@using CarInfo.Application.CarInfo.Commands.CreateCarInfo;
+
+@model CreateCarInfoCommand
+
+
+<h1>Create a car offer</h1>
+<h2>for the car you want to sell</h2>
+<hr />
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form action="/CarInfo/Create" method="post">
+
+            <div class="form-group mb-3">
+                <label class="control-label" asp-for="Name">Name</label>
+                <input class="form-control" type="text" asp-for="Name">
+				<span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label" asp-for="Description">Description</label>
+                <input class="form-control" type="text" asp-for="Description">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label" asp-for="About">About</label>
+                <input class="form-control" type="text" asp-for="About">
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label" asp-for="PhoneNumber">PhoneNumber</label>
+                <input class="form-control" type="text" asp-for="PhoneNumber">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label" asp-for="Address">Address</label>
+                <input class="form-control" type="text" asp-for="Address">
+            </div>
+            <div class="form-group mb-3">
+                <label class="control-label" asp-for="City">City</label>
+                <input class="form-control" type="text" asp-for="City">
+            </div>
+
+            <div class="form-group mb-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
