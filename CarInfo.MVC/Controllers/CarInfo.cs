@@ -87,7 +87,7 @@ namespace CarInfo
                 return View(command);
             }
 
-            /*await _mediator.Send(command);*/
+            await _mediator.Send(command);
 
             this.SetNotification("success", $"Created car: {command.Name}");
 

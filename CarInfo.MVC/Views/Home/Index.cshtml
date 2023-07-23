@@ -2,7 +2,55 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <h1 class="display-4">Search your car</h1>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <form class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="mb-4">Proponowane samochody</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/img/bmw_e36_silver.jpg" class="card-img-top custom-image" alt="Samochód 1">
+                <div class="card-body">
+                    <h5 class="card-title">Bmw E36 Coupe</h5>
+                    <p class="card-text">1992 - 1999, Od 1.6 do 3.2 litra, Od około 75 KM do ponad 320 KM</p>
+                    <a href="#" class="btn btn-primary">Więcej informacji</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/img/bmw_e46_silever.jpg" class="card-img-top custom-image" alt="Samochód 2">
+                <div class="card-body">
+                    <h5 class="card-title">Bmw E46 Sedan</h5>
+                    <p class="card-text">1998 - 2005, Od 1.6 do 3.2 litra, Od około 105 KM do ponad 340 KM</p>
+                    <a href="#" class="btn btn-primary">Więcej informacji</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="/img/mercedes_c200_black.jpg" class="card-img-top custom-image" alt="Samochód 2">
+                <div class="card-body">
+                    <h5 class="card-title">Mercedes C200</h5>
+                    <p class="card-text">1993 - 2023, Od około 1.8 do 2.0 litra, Od około 102 KM do ponad 200 KM</p>
+                    <a href="#" class="btn btn-primary">Więcej informacji</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
