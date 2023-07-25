@@ -5,18 +5,18 @@
     ViewData["Title"] = "Log in";
 }
 
-<div class="text-center">
-    <h1 class="fw-bolder">Zaloguj się aby kontynuować</h1>
-	<img style="width: 200px;" src="/img/login_car.png" alt="" />
+<div class="text-center img-200">
+    <h1 class="fw-bolder mt-5">Zaloguj się aby kontynuować</h1>
+    <img src="/img/login_car.png" alt="" />
 </div>
 <div class="d-flex justify-content-center">
-    <div class="col-md-4">
+    <div>
         <section>
             <div class="d-flex justify-content-center align-items-center">
                 <a>
                     <button class="btn fs-4 shadow-none btn-outline-primary">Zaloguj się</button>
                 </a>
-				<span class="fs-5 px-4">lub</span>
+                <span class="fs-5 px-4">lub</span>
                 <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">
                     <button class="btn fs-4 shadow-none btn-outline-primary">Załóż konto</button>
                 </a>
@@ -36,10 +36,10 @@
                 </div>
                 @*Remember me checkbox*@
                 @*<div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
+                <label asp-for="Input.RememberMe" class="form-label">
+                <input class="form-check-input" asp-for="Input.RememberMe" />
+                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
                 </div>*@
                 <div>
                     <span><a id="forgot-password" asp-page="./ForgotPassword">Nie pamiętasz hasła?</a></span>
@@ -48,15 +48,15 @@
                     <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Zaloguj się</button>
                 </div>
                 @*<div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Nie pamiętasz hasła?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
-                    </p>
+                <p>
+                <a id="forgot-password" asp-page="./ForgotPassword">Nie pamiętasz hasła?</a>
+                </p>
+                <p>
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                </p>
+                <p>
+                <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                </p>
                 </div>*@
             </form>
         </section>

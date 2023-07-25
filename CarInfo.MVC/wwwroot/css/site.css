@@ -26,3 +26,43 @@ body {
     height: 200px;
     object-fit: cover; /* Opcjonalnie, aby zachowa� proporcje obrazka */
 }
+
+
+.manage-account {
+    margin-top: 30px;
+}
+
+.manage-account h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.manage-account .row {
+    margin-bottom: 20px;
+}
+
+.manage-account .col-md-3 {
+    width: 25%;
+}
+
+.manage-account .col-md-9 {
+    width: 75%;
+    }
+
+.img-50 img {
+    width: 50px;
+}
+
+.img-100 img{
+    width: 100px;
+}
+
+.img-200 img {
+    width: 200px;
+}
+
+.user_icon-img img{
+    width: 25px;
+    margin: 4px -20px 0 0px;
+}
