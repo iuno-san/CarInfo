@@ -25,16 +25,16 @@ namespace CarInfo.Application.CarInfo.Commands.CreateCarInfo
 
         public async Task<Unit> Handle(CreateCarInfoCommand request, CancellationToken cancellationToken)
         {
-            var currentUser = _userContext.GetCurrentUser();
+            /*var currentUser = _userContext.GetCurrentUser();
             if(currentUser == null || !currentUser.IsInRole("Owner"))
             {
                 return Unit.Value;
-            }
+            }*/
 
             var carInfo = _mapper.Map<Domain.Entities.CarInfo>(request);
 			carInfo.EncodeName();
 
-			carInfo.CreatedById = currentUser.Id;
+			/*carInfo.CreatedById = currentUser.Id;*/
 
             await _carInfoRepository.Create(carInfo);
 

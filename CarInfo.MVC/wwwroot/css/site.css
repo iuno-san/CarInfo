@@ -22,11 +22,10 @@ body {
 }
 
 .custom-image {
-    width: 100%;
-    height: 200px;
+    width: 250px;
+    height: 190px;
     object-fit: cover; /* Opcjonalnie, aby zachowa� proporcje obrazka */
 }
-
 
 .manage-account {
     margin-top: 30px;
@@ -66,3 +65,98 @@ body {
     width: 25px;
     margin: 4px -20px 0 0px;
 }
+
+.brand-section{
+    display: grid;
+}
+
+.brand-section a {
+    text-decoration: none;
+    color: black;
+    display: grid;
+}
+
+.brand-section li{
+    list-style: none;
+}
+
+.brand-section img{
+    width: 40px;
+}
+
+
+.custom-image:hover {
+    transition: 0.5s;
+    zoom: 1.5;
+}
+
+.section-models {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 24px;
+}
+.models_item {
+    text-decoration: none;
+    color: #36414f;
+}
+.section-models a:hover{
+    color: blue;
+}
+.models_item_image {
+    box-shadow: 2px 4px 5px rgba(0.5,0.2,0.3,0.5);
+    position: relative;
+    padding-top: 75%;
+    transition: all .3s ease;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.models_item_image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+    object-fit: cover;
+    border-radius: 6px;
+    max-width: 100%;
+}
+.models_item_title {
+    color: #2d2828;
+    transition: all .3s ease;
+    line-height: 125%;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin: 8px 0 0 5px;
+}
+.models_item_subhead {
+    opacity: .5;
+    color: black;
+    padding: 5px;
+}
+
+.models_item_image img {
+    transition: transform 0.3s ease;
+}
+
+    .models_item_image img:hover {
+        transform: scale(1.2);
+    }
+
+.models_item_title {
+    transition: color 0.3s ease;
+}
+
+.models_item:hover .models_item_title {
+    color: #208bff;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+    overflow-x: auto;
+}
+

@@ -66,7 +66,8 @@ namespace CarInfo
             return RedirectToAction(nameof(Index));
         }
 
-        [Authorize(Roles = "Owner")]
+        /*[Authorize(Roles = "Owner")]*/
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -77,9 +78,9 @@ namespace CarInfo
             }*/
         }
 
-
+        /*[Authorize(Roles = "Owner")]*/
         [HttpPost]
-        [Authorize(Roles = "Owner")]
+        [Authorize]
         public async Task<IActionResult> Create(CreateCarInfoCommand command)
         {
             if(!ModelState.IsValid)

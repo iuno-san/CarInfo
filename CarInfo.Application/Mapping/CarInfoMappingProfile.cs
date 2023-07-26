@@ -25,7 +25,7 @@ namespace CarInfo.Application.Mapping
                 }));
 
             CreateMap<Domain.Entities.CarInfo, CarInfoDto>()
-				.ForMember(dto => dto.IsEditable, opt => opt.MapFrom(src => user != null && (src.CreatedById == user.Id || user.IsInRole("Moderator"))))
+				.ForMember(dto => dto.IsEditable, opt => opt.MapFrom(src => user != null && (src.CreatedById == user.Id || user.IsInRole("Owner"))))
 				.ForMember(dto => dto.PhoneNumber, opt => opt.MapFrom(src => src.ContactDetails.PhoneNumber))
                 .ForMember(dto => dto.Address, opt => opt.MapFrom(src => src.ContactDetails.Address))
                 .ForMember(dto => dto.City, opt => opt.MapFrom(src => src.ContactDetails.City));
