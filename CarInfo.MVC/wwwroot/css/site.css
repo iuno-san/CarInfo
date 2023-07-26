@@ -90,14 +90,10 @@ body {
     zoom: 1.5;
 }
 
-.section-models {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 24px;
-}
 .models_item {
     text-decoration: none;
     color: #36414f;
+    cursor: pointer;
 }
 .section-models a:hover{
     color: blue;
@@ -132,7 +128,7 @@ body {
 .models_item_subhead {
     opacity: .5;
     color: black;
-    padding: 5px;
+    margin: 0 0 0 5px;
 }
 
 .models_item_image img {
@@ -160,3 +156,25 @@ body {
     overflow-x: auto;
 }
 
+.models_item {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+@media (max-width: 768px) {
+    .models_item {
+        width: 50%;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .models_item {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+.small-img{
+    width: 40px;
+}

@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInfo.ApplicationTests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3C8B3EEA-A9BA-47A5-B96C-14D48897D584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInfo.MVCTests", "CarInfo.MVCTests\CarInfo.MVCTests.csproj", "{CA99ABE6-4ED7-471B-A22A-B1B93BB7DE29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarInfo.MVCTests", "CarInfo.MVCTests\CarInfo.MVCTests.csproj", "{CA99ABE6-4ED7-471B-A22A-B1B93BB7DE29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

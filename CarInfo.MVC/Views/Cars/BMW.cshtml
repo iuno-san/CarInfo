@@ -1,0 +1,394 @@
+﻿@page
+@model CarInfo.MVC.Views.Cars.BMWModel
+
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <h1 class="display-4">⚡Znajdź swój samochód⚡</h1>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <form class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Szukaj...">
+                            <button class="btn btn-primary" type="button">Szukaj</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="mb-4">Wszystkie modele | <img class="small-img" src="/img/icon/bmw_icon.png" /></h2>
+    <hr />
+    @*Brands*@
+    <div class="menu-items">
+        <ul class="ms-0">
+            <li class="brand-section">
+                <a href="@Url.Action("BMW", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/bmw_icon.png" />
+                    </div>
+                    <span>Bmw</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Mercedes", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/mercedes_icon.png" />
+                    </div>
+                    <span>Mercedes</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Ford", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/ford_icon.png" />
+                    </div>
+                    <span>Ford</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Mazda", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/mazda_icon.png" />
+                    </div>
+                    <span>Mazda</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Renault", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/renault_icon.png" />
+                    </div>
+                    <span>Renault</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Peugeot", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/peugeot_icon.png" />
+                    </div>
+                    <span>Peugeot</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Opel", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/opel_icon.png" />
+                    </div>
+                    <span>Opel</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Volvo", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/volvo_icon.png" />
+                    </div>
+                    <span>Volvo</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Volkswagen", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/volkswagen_icon.png" />
+                    </div>
+                    <span>Volkswagen</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Fiat", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/fiat_icon.png" />
+                    </div>
+                    <span>Fiat</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Audi", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/audi_icon.png" />
+                    </div>
+                    <span>Audi</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Toyota", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/toyota_icon.png" />
+                    </div>
+                    <span>Toyota</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Seat", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/seat_icon.png" />
+                    </div>
+                    <span>Seat</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Hyundai", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/hyundai_icon.png" />
+                    </div>
+                    <span>Hyundai</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="brand-section">
+                <a href="@Url.Action("Citroen", "Cars")">
+                    <div class="d-flex justify-content-center">
+                        <img src="/img/icon/citroen_icon.png" />
+                    </div>
+                    <span>Citroen</span>
+                </a>
+            </li>
+        </ul>
+
+
+
+    </div>
+
+    @*Cars*@
+    <hr class="mt-0" />
+    <div class="container pt-4">
+        <div class="row row-gap-4 row-cols-xxl-5 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-2">
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_1.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 1</h3>
+                    <span class="models_item_subhead">4 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_2.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 2</h3>
+                    <span class="models_item_subhead">3 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_3.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 3</h3>
+                    <span class="models_item_subhead">5 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_4.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 4</h3>
+                    <span class="models_item_subhead">2 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_5.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 5</h3>
+                    <span class="models_item_subhead">6 generacji modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_6.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 6</h3>
+                    <span class="models_item_subhead">3 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_7.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 7</h3>
+                    <span class="models_item_subhead">5 generacji modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_8.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW 8</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_iX.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW iX</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_iX3.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW iX3</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X1.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X1</h3>
+                    <span class="models_item_subhead">4 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X2.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X2</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X3.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X3</h3>
+                    <span class="models_item_subhead">4 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X4.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X4</h3>
+                    <span class="models_item_subhead">2 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X5.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X5</h3>
+                    <span class="models_item_subhead">4 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X6.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X6</h3>
+                    <span class="models_item_subhead">3 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_X7.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW X7</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_XM.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW XM</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/bmw_Z3.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW Z3</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_Z4.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW Z4</h3>
+                    <span class="models_item_subhead">3 generacje modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_Z8.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW Z8</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_i3.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW i3</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+            <div>
+                <a class="models_item">
+                    <div class="models_item_image">
+                        <img src="/img/BMW/BMW_i8.jpg" alt="" />
+                    </div>
+                    <h3 class="models_item_title">BMW i8</h3>
+                    <span class="models_item_subhead">1 generacja modelu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
