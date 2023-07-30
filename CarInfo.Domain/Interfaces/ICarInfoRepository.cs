@@ -12,6 +12,9 @@ namespace CarInfo.Domain.Interfaces
         Task<Domain.Entities.CarInfo?> GetByName(string name);
         Task<IEnumerable<Domain.Entities.CarInfo>> GetAll();
         Task<Domain.Entities.CarInfo> GetByEncodedName(string encodedName);
+        Task<List<string>> GetBrandsAsync();
+        Task<List<string>> GetModelsAsync(string brand);
+        Task<List<string>> GetVersionsAsync(string brand, string model);
         Task Commit();
     }
 }

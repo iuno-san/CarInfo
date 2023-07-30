@@ -178,3 +178,168 @@ body {
 .small-img{
     width: 40px;
 }
+
+.form-select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.form-select::-ms-expand {
+    display: none;
+}
+
+.form-select option {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+.form-select option:hover {
+    background-color: #eee;
+}
+
+.form-select option:focus {
+    border: 1px solid #000;
+    background-color: #ddd;
+}
+
+
+.search-bar {
+    width: 100%;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+    padding: .75rem 1.5rem;
+    display: flex;
+    border-width: 1px;
+    border-radius: .5rem;
+}
+
+.search-bar button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    margin: 5px 1rem 0;
+}
+.search-bar img{
+    width: 25px;
+}
+
+.Vehicle-type {
+    position: relative;
+    display: flex;
+    border-radius: 4px 4px 0px 0px;
+    padding: 0px;
+    background-color: rgb(235, 236, 239);
+    border-color: rgb(235, 236, 239) rgb(235, 236, 239) rgb(2, 3, 9);
+}
+
+.Vehicle-type select {
+    background: transparent;
+    border: 0px none;
+    caret-color: rgb(2, 3, 9);
+    color: rgb(2, 3, 9);
+    flex: 1 1 0%;
+    font-size: 16px;
+    height: 48px;
+    line-height: 20px;
+    outline: 0px;
+    padding-left: 16px;
+    text-align: left;
+    border-bottom: 3px solid black;
+}
+
+.Vehicle-type img {
+    width: 35px;
+    margin-right: 5px;
+}
+
+.Vehicle-type select:active, select:focus, select:hover {
+    outline: none;
+    border-color: black !important;
+    box-shadow: none !important;
+}
+
+.info-form label {
+    margin: 0px;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(2, 3, 9);
+    width: 100%;
+    padding: 0px 0px 8px;
+}
+
+.info-form input {
+    font-size: 16px;
+    color: rgb(2, 3, 9);
+    background-color: rgb(235, 236, 239);
+    border-color: rgb(171, 27, 7);
+    border-style: none none solid;
+    border-width: 2px;
+    border-radius: 4px;
+    line-height: 20px;
+    outline: 0px;
+    padding: 14px 48px 14px 16px;
+    width: 100%;
+}
+
+.info-form span {
+    color: rgb(161, 162, 165);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 16px;
+}
+
+.info-form-item{
+    width: 100%;
+}
+
+.info-slash {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(161, 162, 165);
+    margin: 0px 8px;
+}
+
+.info-date-form {
+    display: flex;
+    align-items: center;
+}
+
+.info-date-form input {
+    flex: 1 1 calc(29% - 32px);
+}
+
+
+.dropdown-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.dropdown-list li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+    .dropdown-list li:hover {
+        background-color: #ddd;
+    }

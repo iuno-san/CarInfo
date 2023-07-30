@@ -3,12 +3,7 @@
 @model CreateCarInfoCommand
 
 
-<h1>Create a car offer</h1>
-<h2>for the car you want to sell</h2>
-<hr />
-
-
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <form action="/CarInfo/Create" method="post">
 
@@ -46,8 +41,108 @@
             </div>
         </form>
     </div>
-</div>
+</div>*@
 
+
+<div class="container">
+    <h1 class="fw-bolder pt-4">Stwórz ogłoszenie</h1>
+
+    <h5 class="text-muted mt-3">Rodzaj pojazdu</h5>
+    <div class="Vehicle-type mt-3">
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Osobowe</option>
+            <option value="1">Motocykle</option>
+            <option value="2">Ciężarowe</option>
+            <option value="3">Dostawcze</option>
+            <option value="4">Rolnicze</option>
+            <option value="5">Budowlane</option>
+        </select>
+    </div>
+
+    
+    <h2 class ="fw-bolder mt-5">Dane pojazdu</h2>
+	<h5 class="text-muted mt-3">Informacje podstawowe</h5>
+	<div class="info-form mt-4 d-flex">
+		<div class="me-3 info-form-item">
+            <div>
+                <label>VIN*</label>
+            </div>
+            <div class="position-relative">
+                <input type="text" placeholder="np. VGZZZ5NZ8W031284" value="" />
+            </div>
+        </div>
+        <div class="info-form-item">
+            <div>
+                <label>Przebieg*</label>
+            </div>
+            <div class="position-relative">
+                <input type="text" placeholder="np. 125 000" value="" />
+				<span>km</span>
+            </div>
+        </div>
+    </div>
+    <div class="info-form mt-5 d-flex">
+        <div class="me-3 info-form-item">
+            <div>
+                <label>Numer rejestracyjny pojazdu*</label>
+            </div>
+            <div class="position-relative">
+                <input type="text" placeholder="np. WH 43442" value="" />
+            </div>
+        </div>
+        <div class="info-form-item">
+            <div>
+                <label>Data pierwszej rejestracji w historii pojazdu*</label>
+            </div>
+            <div class="position-relative info-date-form">
+                <input type="text" placeholder="DD" value="" />
+				<p class="info-slash">/</p>
+                <input type="text" placeholder="MM" value="" />
+				<p class="info-slash">/</p>
+                <input type="text" placeholder="RRRR" value="" />
+            </div>
+        </div>
+    </div>
+
+    <h5 class="text-muted mt-5">Dane techniczne</h5>
+    <div class="info-form mt-4 d-flex">
+        <div class="me-3 info-form-item">
+            <div>
+                <label>Rok produkcji*</label>
+            </div>
+            <div class="position-relative">
+                <input type="text" value="" />
+            </div>
+        </div>
+        <div class="info-form-item">
+            <div>
+                <label>Marka pojazdu*</label>
+            </div>
+            <div class="position-relative">
+                <input type="text" value="" />
+            </div>
+        </div>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="brandSelect">Select Brand:</label>
+            <select class="form-control" id="brandSelect"></select>
+        </div>
+
+        <div class="form-group">
+            <label for="modelSelect">Select Model:</label>
+            <select class="form-control" id="modelSelect" disabled></select>
+        </div>
+
+        <div class="form-group">
+            <label for="versionSelect">Select Version:</label>
+            <select class="form-control" id="versionSelect" disabled></select>
+        </div>
+    </form>
+
+
+
+</div>  
 @section scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");

@@ -1,4 +1,5 @@
 ﻿using CarInfo.Application.CarInfo;
+using CarInfo.Domain.Entities;
 using CarInfo.Domain.Interfaces;
 using CarInfo.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace CarInfo.Infrastructure.Repository
     internal class CarInfoRepository : ICarInfoRepository
     {
         private readonly CarInfoDbContext _dbContext;
+
 
         public CarInfoRepository(CarInfoDbContext dbContext)
         {
@@ -48,5 +50,23 @@ namespace CarInfo.Infrastructure.Repository
         public Task<Domain.Entities.CarInfo> GetByName(string name)
         => _dbContext.CarsInfos.FirstOrDefaultAsync
             (cw => cw.Name.ToLower() == name.ToLower());
+
+
+
+        public async Task<List<string>> GetBrandsAsync()
+        {
+            List<string> brands = await _dbContext.Vehicles.Select(v => v.Brand).Distinct().ToListAsync();
+            return brands;
+        }
+
+        public Task<List<string>> GetModelsAsync(string brand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<string>> GetVersionsAsync(string brand, string model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
