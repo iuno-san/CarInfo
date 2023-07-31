@@ -16,18 +16,18 @@ namespace CarInfo.Infrastructure.Extensions
 {
     public static class ServicesCollectionExtensions
     {
-        public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddDbContext<CarInfoDbContext>(options => options.UseSqlServer(
-               configuration.GetConnectionString("CarInfo")));
+		public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+		{
+			services.AddDbContext<CarInfoDbContext>(options => options.UseSqlServer(
+				configuration.GetConnectionString("CarInfo")));
 
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<CarInfoDbContext>();
+			services.AddDefaultIdentity<IdentityUser>()
+				.AddRoles<IdentityRole>()
+				.AddEntityFrameworkStores<CarInfoDbContext>();
 
-            services.AddScoped<CarInfoSeeder>();
+			services.AddScoped<CarInfoSeeder>();
 
-            services.AddScoped<ICarInfoRepository, CarInfoRepository>();
-        }
-    }
+			services.AddScoped<ICarInfoRepository, CarInfoRepository>();
+		}
+	}
 }
