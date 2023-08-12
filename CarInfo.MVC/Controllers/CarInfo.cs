@@ -1,16 +1,14 @@
 ﻿using AutoMapper;
-using CarInfo.Application.CarInfo;
 using CarInfo.Application.CarInfo.Commands.CreateCarInfo;
 using CarInfo.Application.CarInfo.Commands.EditCarInfo;
 using CarInfo.Application.CarInfo.Queries.GetAllCarInfo;
 using CarInfo.Application.CarInfo.Queries.GetCarInfoByEncodedName;
 using CarInfo.MVC.Extensions;
 using CarInfo.MVC.Models;
+using CarInfo.MVC.Services;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Newtonsoft.Json;
 
 namespace CarInfo
 {
@@ -18,11 +16,13 @@ namespace CarInfo
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
+        private readonly BrandService _brandService;
 
-        public CarInfoController(IMediator mediator, IMapper mapper)
+        public CarInfoController(IMediator mediator, IMapper mapper, BrandService brandService)
         {
             _mediator = mediator;
             _mapper = mapper;
+            _brandService = brandService;
         }
 
         public async Task<IActionResult> Index()
@@ -66,17 +66,18 @@ namespace CarInfo
             return RedirectToAction(nameof(Index));
         }
 
-        /*[Authorize(Roles = "Owner")]*/
         [Authorize]
         public IActionResult Create()
         {
-            return View();
+            var selectedYear = 2023; // Pobierz to z żądania lub innej logiki
+            var viewModel = new CreateVehicleViewModel();
 
-            /*if(User.Identity == null || !User.Identity.IsAuthenticated)
-            {
-                return RedirectToPage("/Account/Login", new { area = "Identity"});
-            }*/
+            var brands = _brandService.GetBrandsByYear(selectedYear);
+            viewModel.AvailableBrands = brands;
+
+            return View(viewModel);
         }
+
 
         /*[Authorize(Roles = "Owner")]*/
         [HttpPost]
@@ -93,6 +94,13 @@ namespace CarInfo
             this.SetNotification("success", $"Created car: {command.Name}");
 
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult GetBrandsByYear(int year)
+        {
+            var brands = _brandService.GetBrandsByYear(year);
+            return Json(brands);
         }
     }
 }

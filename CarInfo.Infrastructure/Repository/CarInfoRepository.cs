@@ -43,6 +43,11 @@ namespace CarInfo.Infrastructure.Repository
 		public async Task<IEnumerable<Domain.Entities.CarInfo>> GetAll()
            => await _dbContext.CarsInfos.ToListAsync();
 
+        public Task<List<string>> GetBrandsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<Domain.Entities.CarInfo> GetByEncodedName(string encodedName)
             => await _dbContext.CarsInfos.FirstAsync(c => c.EncodedName == encodedName);
         
@@ -50,14 +55,6 @@ namespace CarInfo.Infrastructure.Repository
         public Task<Domain.Entities.CarInfo> GetByName(string name)
         => _dbContext.CarsInfos.FirstOrDefaultAsync
             (cw => cw.Name.ToLower() == name.ToLower());
-
-
-
-        public async Task<List<string>> GetBrandsAsync()
-        {
-            List<string> brands = await _dbContext.Vehicles.Select(v => v.Brand).Distinct().ToListAsync();
-            return brands;
-        }
 
         public Task<List<string>> GetModelsAsync(string brand)
         {

@@ -1,6 +1,6 @@
 ﻿@using CarInfo.Application.CarInfo.Commands.CreateCarInfo;
 
-@model CreateCarInfoCommand
+@model CarInfo.MVC.Models.CreateVehicleViewModel
 
 
 @*<div class="row">
@@ -105,24 +105,21 @@
     </div>
 
     <h5 class="text-muted mt-5">Dane techniczne</h5>
-    <div class="info-form mt-4 d-flex">
-        <div class="me-3 info-form-item">
-            <div>
-                <label>Rok produkcji*</label>
-            </div>
-            <div class="position-relative">
-                <input type="text" value="" />
-            </div>
-        </div>
-        <div class="info-form-item">
-            <div>
-                <label>Marka pojazdu*</label>
-            </div>
-            <div class="position-relative">
-                <input type="text" value="" />
-            </div>
-        </div>
+    <div class="form-group">
+        <label asp-for="SelectedYear">Year of Production:</label>
+        <select class="form-control" asp-for="SelectedYear" asp-items="@(new SelectList(Model.AvailableYears))"></select>
     </div>
+    <div class="form-group">
+        <label asp-for="SelectedBrandId">Brand:</label>
+        <select class="form-control" asp-for="SelectedBrandId" id="SelectedBrandId">
+            <option value="">Select Brand</option>
+            @foreach (var brand in Model.AvailableBrands)
+            {
+                <option value="@brand.Id">@brand.Name</option>
+            }
+        </select>
+    </div>
+
 
 
 </div>  

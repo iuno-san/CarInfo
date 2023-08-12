@@ -8,4 +8,18 @@ document.querySelector(".search-bar button").addEventListener("click", function 
 });
 
 
+$(document).ready(function () {
+    $("#SelectedYear").change(function () {
+        var selectedYear = $(this).val();
+        $.get(`/CarInfo/GetBrandsByYear?year=${selectedYear}`, function (data) {
+            $("#Brand").empty();
+            $("#Brand").append(new Option("Select Brand", ""));
+            $.each(data, function (index, brand) {
+                $("#Brand").append(new Option(brand.name, brand.id));
+            });
+        });
+    });
+});
+
+
 

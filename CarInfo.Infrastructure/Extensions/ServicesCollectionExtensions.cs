@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CarInfo.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarInfo.MVC.Services;
 
 namespace CarInfo.Infrastructure.Extensions
 {
@@ -28,6 +30,8 @@ namespace CarInfo.Infrastructure.Extensions
 			services.AddScoped<CarInfoSeeder>();
 
 			services.AddScoped<ICarInfoRepository, CarInfoRepository>();
+
+			services.AddScoped<BrandService>();
 		}
 	}
 }
