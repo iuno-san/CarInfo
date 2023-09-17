@@ -1,2 +1,3 @@
-# InfoCar
-web application modeled on otomoto
+# InfoCar 🚗
+## Web application like autokatalog otomoto 🔥
+![](https://github.com/iuno-san/CarInfo/blob/main/CarInfo-preview.png)
