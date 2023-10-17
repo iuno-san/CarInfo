@@ -8,7 +8,7 @@ namespace CarInfo.MVC.Controllers
 	{
 		public IActionResult Index()
 		{
-			// Ta akcja wyświetla stronę główną z wyborem marek
+			// Ta akcja wyświetla stronę główną z wyborem marek aut
 			return View();
 		}
 
