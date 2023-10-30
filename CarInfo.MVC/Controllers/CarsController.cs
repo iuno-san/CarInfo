@@ -12,6 +12,7 @@ namespace CarInfo.MVC.Controllers
 			return View();
 		}
 
+
 		public IActionResult Mercedes()
 		{
 			return View();
