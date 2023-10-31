@@ -18,6 +18,8 @@ namespace CarInfo.Infrastructure.Persistence
         public DbSet<Domain.Entities.CarInfo> CarsInfos { get; set; }
 
         public DbSet<Domain.Entities.Vehicle> Vehicles { get; set; }
+
+        public DbSet<Domain.Entities.CarModels> CarModels { get; set; }
    
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
